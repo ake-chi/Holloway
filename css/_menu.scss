@@ -1,0 +1,187 @@
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #fff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+//   padding-top: 30px; /* Place content 60px from the top */
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+  box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 30px;
+  text-decoration: none;
+  font-size: $body-text-size;
+  color: $body-text-color2;
+  display: block;
+  transition: 0.2s;
+  text-align: left;
+  @include lustria;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.mob-logo{
+    display: none;
+}
+
+ul.side-menu-links {
+  li {
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    &:first-child{
+        border-top: none;
+    }
+    a {
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background: transparent;
+        color: #dfc1c0;
+      }
+    }    
+  }
+}
+
+.close-nav {
+    padding:20px 0;
+
+    a {
+        text-align: right;      
+      }
+}
+
+ul.dropdown-menu {
+  position: inherit;
+  width: 100%;
+  box-shadow: none;
+  padding-left: 40px;
+  border:none;
+  li {
+    border-top: none;
+    margin: 20px 0;
+    padding:0;
+    a {
+      &:hover {
+        background: transparent;
+        color: #dfc1c0;
+      }
+    }
+  }
+}
+
+body{
+    position: relative;
+}
+
+#dk-bg{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 12;
+    transition:0.3s ease-in-out;
+}
+
+.dropdown::before{
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 20px;
+    color: #333;
+    font-weight: 900;
+    position: absolute;
+    top: 25px;
+    right: 34px;
+    z-index: 1;
+}
+
+.dropdown.open{
+    &::before{
+      display: none;
+    }
+    &::after{
+      content: '\f106';
+      font-family: 'Font Awesome 5 Free';
+      font-size: 20px;
+      color: #333;
+      font-weight: 900;
+      position: absolute;
+      top: 25px;
+      right: 34px;
+      z-index: 1;
+    }
+  }
+
+
+  
+
+.search-bar {
+    margin:30px;
+    display: none;
+    .input-group {
+      width: 100%;
+  
+      input {
+        @include dosis;
+        border-radius: 50px !important;
+        background-color: #eee;
+        height: 50px;
+        padding-left: 25px;
+        color: $body-text-color2 !important;
+        border: none;
+        box-shadow: none;
+        font-size: 14px;
+      }
+  
+      ::placeholder {
+        color: #555;
+      }
+  
+      span.input-group-btn {
+        position: absolute;
+        right: 40px;
+        padding-top: 4px;
+        z-index: 5;
+        color: $body-text-color2 !important;
+  
+        button {
+          background-color: transparent;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            color: #dfc1c0;
+          }
+          &.btn {
+            padding: 12px;           
+            &:active,
+            &:focus,
+            &:focus-within {
+              outline: none !important;
+              outline-offset: 0 !important;
+              box-shadow: none;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }

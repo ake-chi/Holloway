@@ -1,0 +1,28 @@
+#contact-pg {
+  background: url("/imgs/contact-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.contact-pg {
+  text-align: center;
+  margin: 0 20%;
+
+  .contact-form {
+    margin-top: 30px;
+    padding: 0 10%;
+  }
+}
+
+.h-desc-title.cart-err-msg {
+  text-align: center; 
+
+  h1{
+    font-size: 20px;
+    line-height: 36px;
+  }
+  p{
+    @include dosis;
+    font-weight: normal;
+  }
+}

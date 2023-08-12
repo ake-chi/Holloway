@@ -1,0 +1,35 @@
+.nav-container.subpg-nav{
+    position: fixed;
+    background-color: #fff;
+}
+
+.subpg-nav{
+    .main-menu{
+        .mm.menu-icon{
+            .menu-btn{
+                width: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.subpg-header{
+    height: 300px;
+    margin-top:173px;
+    transition: 500ms ease;
+}
+
+#abt-pg{
+    background: url('/imgs/abt-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.h-desc-p.abt-desc-p{
+    p{
+        &:last-child{
+            margin-top: 20px;
+        }
+    }
+}
